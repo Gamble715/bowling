@@ -16,17 +16,17 @@ class BowlingGame
 		# Returns the Integer score for this game. Expects to be run after all rolls
 		# for the game have been recorded.
 	def score
-  while @current_roll < @rolls.size - 1
-    init_roll
+    while @current_roll < @rolls.size - 1
+      init_roll
 
-    if strike?
-    	score_strike
-    elsif spare?
-      score_spare
-    else 
-      score_norm
+      if strike?
+      	score_strike
+      elsif spare?
+        score_spare
+      else 
+        score_norm
+      end
     end
-  end
 
   	return @total_score
 	end
